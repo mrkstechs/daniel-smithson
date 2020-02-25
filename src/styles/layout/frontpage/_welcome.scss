@@ -1,0 +1,189 @@
+#welcome{
+    //opacity: 0; // disable
+    @include flexCenter;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $black;
+    z-index: 8;
+    transition: all .3s ease;
+    animation: show-home 1s ease 6s 1  forwards;
+    #logo-wrap, #logo, #top, #drum, #stick-left, #stick-right, #daniel, #smithson{
+        display: block;
+    }
+    #logo-wrap{
+        width: 75%;
+        overflow: visible;
+        #logo{
+            position: relative;
+            #drum{
+                transform-origin: bottom right;
+                transform: scale(1.73);
+                transition: all .3s ease;
+                animation: skrink-drum 1s ease 3s 1  forwards;
+                fill: $black;
+                #stick-left, #stick-right{
+                    fill: darken($lighter_dark, 45%);
+                }
+                #stick-left{
+                    transform-origin: left center;
+                    transform: rotate(-12deg);
+                    transition: all .1s ease;
+                    animation: lplay .7s ease .2s 5 alternate forwards;
+                }
+                #stick-right{
+                    transform-origin: right center;
+                    transform: rotate(9deg);
+                    transition: all .1s ease;
+                    animation: rplay .7s ease 1s 5 alternate forwards;
+                }
+                #sound-wave{
+                    fill: #000000;
+                    #inner-wave, #outer-wave{
+                        display: block;
+                    }
+                    #outer-wave{
+                        .st0:nth-child(1){
+                            opacity: 0;
+                            transition: all .2s ease;
+                            animation: outwave1 1s ease 1.5s 5 alternate forwards;
+                        }
+                        .st0:nth-child(2){
+                            opacity: 0;
+                            transition: all .2s ease;
+                            animation: outwave2 1s ease 1.7s 5 alternate forwards;
+                        }
+                    }
+                    #inner-wave{
+                        .st0:nth-child(1){
+                            opacity: 0;
+                            transition: all .2s ease;
+                            animation: inwave1 1s ease 1s 5 alternate forwards;
+                        }
+                        .st0:nth-child(2){
+                            opacity: 0;
+                            transition: all .2s ease;
+                            animation: inwave2 1s ease 1.3s 5 alternate forwards;
+                        }
+                    }
+                }
+                #top{
+                    fill: darken($grey, 5%);
+                }
+                #base{
+                    fill: lighten($black, 15%);
+                }
+            }
+            #daniel, #smithson{
+                opacity: 0;
+                fill: darken($grey, 15%);
+            }
+            #daniel{
+                transition: all .3s ease;
+                animation: dan-slide-in 1s ease 3.2s 1  forwards;
+            }
+            #smithson{
+                transition: all .3s ease;
+                animation: dan-pop-up 1s ease 3.2s 1  forwards;
+            }
+        }
+    }
+}
+
+@keyframes lplay{
+    from{transform: rotate(-12deg);}
+    to{transform: rotate(0deg);}
+}
+@keyframes rplay{
+    from{transform: rotate(9deg);}
+    to{transform: rotate(0deg);}
+}
+@keyframes inwave1{
+    0%{opacity: 0.2; transform: translateX(0px);}
+    50%{opacity: 0.5; transform: translateX(-10px);}
+    100%{opacity: 1; transform: translateX(0px);}
+}
+@keyframes inwave2{
+    0%{opacity: 0.2; transform: translateX(0px);}
+    50%{opacity: 0.5; transform: translateX(10px);}
+    100%{opacity: 1; transform: translateX(0px);}
+}
+@keyframes outwave1{
+    0%{opacity: 0.2; transform: translateX(-5px);}
+    50%{opacity: 0.5; transform: translateX(-15px);}
+    100%{opacity: 1; transform: translateX(-5px);}
+}
+@keyframes outwave2{
+    0%{opacity: 0.2; transform: translateX(5px);}
+    50%{opacity: 0.5; transform: translateX(15px);}
+    100%{opacity: 1; transform: translateX(5px);}
+}
+@keyframes skrink-drum{
+    to{transform: scale(1);}
+}
+@keyframes dan-slide-in{
+    0%{opacity: 0; transform: translateX(-100%);}
+    100%{opacity: 1; transform: translateX(0);}
+}
+@keyframes dan-pop-up{
+    0%{opacity: 0; transform: translateY(100%);}
+    100%{opacity: 1; transform: translateY(0%);}
+}
+
+@keyframes show-home{
+    to{height: 0;}
+}
+// Media Queries
+@media only screen  and (min-width: 400px){
+    #welcome{
+        #logo-wrap{
+            width: 65%;
+        }
+    }
+}
+@media only screen  and (min-width: 500px){
+    #welcome{
+        #logo-wrap{
+            width: 50%;
+        }
+    }
+}
+@media only screen  and (min-width: 700px){
+    #welcome{
+        #logo-wrap{
+            width: 40%;
+        }
+    }
+}
+@media only screen  and (min-width: 1024px){
+    #welcome{
+        #logo-wrap{
+            width: 30%;
+        }
+    }
+}
+@media only screen  and (min-width: 1300px){
+    #welcome{
+        #logo-wrap{
+            width: 25%;
+        }
+    }
+}
+@media only screen  and (min-width: 1500px){
+    #welcome{
+        #logo-wrap{
+            width: 20%;
+        }
+    }
+}
+@media only screen  and (min-width: 1800px){
+    #welcome{
+        #logo-wrap{
+            width: 17%;
+        }
+    }
+}

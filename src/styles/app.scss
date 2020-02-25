@@ -1,0 +1,77 @@
+@import 'vars/vars';
+
+@import 'mixins/mixins';
+
+@import 'layout/layout';
+
+*{
+    box-sizing: border-box;
+}
+html{
+    min-height:100%;
+    padding: 0;
+    margin: 0;
+    body{
+        min-height: 100%;
+        padding: 0;
+        margin: 0 !important;
+        font-family: $font;
+        text-shadow: 1px 1px 1px #595959;
+        color: rgba($white, 0.75);
+        background-color: $black;
+        #privacy-notice {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: .5em .7em;
+            background-color: lighten($grey, 30%);
+            position: fixed;
+            bottom: 0vh;
+            z-index: 999;
+            opacity: 0;
+            transition: opacity .5s ease;
+            animation: pp-fade-in 1s ease-in .2s 1 forwards;
+            p{
+                color: $charcoal;
+                text-shadow: none;
+                margin: 0;
+                a{
+                    color: $grey;
+                }
+            }
+            #pp-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 5em;
+                padding: .5em;
+                background-color: $green;
+                margin-left: 1em;
+            }
+        }
+        #page{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            .seo-text{
+                display: none;
+            }
+        }
+        .page{
+            margin: 0;
+        }
+    }
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+@keyframes pp-fade-in{
+    100%{opacity: 1;}
+}

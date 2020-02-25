@@ -1,0 +1,124 @@
+@import 'header';
+
+@import 'main';
+
+@import 'footer';
+
+@import 'pages';
+
+// Plugins
+
+.wpcf7-form{
+    width: 93%;
+    margin-left: auto;
+    margin-top: 10%;
+    margin-bottom: 15%;
+    padding: 0 10%;
+    padding-bottom: 1%;
+    background-color: $charcoal;
+    h3{
+        color: $white;
+        margin: 0;
+        font-size: 2em;
+        transform: translate(-8%, -40%);
+    }
+    p:nth-child(3){
+        margin-top: -10%;
+    }
+    span{
+        display: block;
+        input, textarea{
+            display: block;
+            width: 100%;
+            border: none;
+            margin: 1em 0;
+            padding: 1em 0 1em 1em;
+            font-family: $font;
+            font-weight: 900;
+            color: $black;
+        }
+        textarea{
+            width: 98.1%;
+            padding-right: 2%;
+        }
+    }
+    p:nth-child(4){
+        display: flex;
+        align-items: center;
+        .wpcf7-submit{
+            display: block;
+            border: none;
+            padding: 1em;
+            font-family: $font;
+            font-weight: 900;
+            font-size: 1.2em;
+            color: darken($white, 20%);
+            margin-left: auto;
+            background-color: $grey;
+        }
+    }
+}
+
+.connect{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-top: .6em;
+    padding: .3em .7em 0.3em 0em;
+    width: 90%;
+    background-color: $charcoal;
+    li{
+        a{
+            display: block;
+            svg{
+                width: 50%;
+                margin: 0 auto;
+                fill: $white;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 400px){
+    .wpcf7-form{
+        width: 85%;
+        h3{
+            margin-bottom: 1em;
+        }
+    }
+}
+@media only screen and (min-width: 500px){
+    .wpcf7-form{
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 572px){
+    .wpcf7-form{
+        width: 70%;
+    }
+}
+@media only screen and (min-width: 700px){
+    .wpcf7-form{
+        p:nth-child(3){
+            margin-top: 0;
+        }
+    }
+}
+@media only screen and (min-width: 770px){
+    .wpcf7-form{
+        width: 70%;
+        margin-right: 5%;
+        p:nth-child(3){
+            margin-top: -2%;
+        }
+    }
+}
+@media only screen and (min-width: 876px){
+    .wpcf7-form{
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 1167px){
+    .wpcf7-form{
+        width: 55%;
+    }
+}

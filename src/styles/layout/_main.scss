@@ -1,0 +1,77 @@
+#content{
+    width: 100%;
+    min-height: 68.1vh;
+    .entry-header{
+        @include flexCenter;
+        .entry-title{
+            display: inline-block;
+            text-align: center;
+            background-color: $charcoal;
+            padding: 0 .5em;
+        }
+    }
+    .entry-content{
+        padding-top: 1.3em;;
+        .main-text{
+            width: 90%;
+            margin-left: auto;
+            margin-top: 1em;
+            padding: 0.1px 0.7em 1em 1em;
+            text-shadow: 1px 1px 1px #595959;
+            color: rgba($white, 0.6);
+            background-color: $charcoal;
+            .wp-block-group__inner-container{
+                transform: translateY(-1.6em);
+            }
+        }
+        .text, .booking-intro{
+            width: 90%;
+            margin: 1em auto;
+            text-align: center;
+        }
+        blockquote{
+            display: block;
+            width:  100%;
+            margin-left: auto;
+            margin-right: 0;
+            padding: 1em;
+            font-size: 1em;
+            color: rgba($white, 0.8);
+            background-color: $black;
+            cite{
+                display: block;
+                width: 60%;
+                text-align: center;
+                margin-left: auto;
+                padding: .2em;
+                background-color: $charcoal;
+            }
+        }
+    }
+}
+
+@media only screen  and (min-width: 1167px){
+    #content{
+        padding: 0 5vw;
+    }
+}
+@media only screen  and (min-width: 1167px){
+    #content{
+        padding: 0 10vw;
+    }
+}
+@media only screen  and (min-width: 1167px){
+    #content{
+        padding: 0 15vw;
+        .entry-content{
+            blockquote{
+                width: 60%;
+            }
+        }
+    }
+}
+@media only screen  and (min-width: 1884px){
+    #content{
+        padding: 0 20vw;
+    }
+}

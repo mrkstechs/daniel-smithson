@@ -1,0 +1,116 @@
+#videos{
+    padding: 0 2em;
+    #player{
+        width: 100%;
+        height: 50vw;
+    }
+    #vid-actions{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.3em;
+        #play-wrapper{
+            display: flex;
+            position: relative;
+            width: 1.2em;
+            height: 1.2em;
+        }
+        #prev,#next, #play, #pause{
+            width: 1.5em;
+            height: 1.5em;
+            margin: 0 .5em;
+        }
+        #vid-title{
+            width: 60%;
+        }
+        #prev{
+            @include backImgFull('/wp-content/themes/daniel-smithson/public/imgs/pre.svg');
+        }
+        #play{
+            @include backImgFull('/wp-content/themes/daniel-smithson/public/imgs/play.svg');
+            opacity: 0;
+        }
+        #pause{
+            @include backImgFull('/wp-content/themes/daniel-smithson/public/imgs/pause.svg');
+        }
+        #next{
+            @include backImgFull('/wp-content/themes/daniel-smithson/public/imgs/next.svg');
+        }
+        #play, #pause{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1em;
+            height: 1em;
+        }
+        #vid-title{
+            text-align: center;
+            padding: 0 .5em;
+            margin-left: 0.5em;
+        }
+    }
+}
+@media only screen and (min-width: 700px){
+    #videos{
+        #player{
+            display: block;
+            width: 80%;
+            height: 41vw;
+            margin: 0 auto;
+            margin-bottom: 1em
+        }
+    }
+}
+@media only screen and (min-width: 1000px){
+    #videos{
+        #player{
+            width: 70%;
+            height: 37vw;
+        }
+    }
+}
+@media only screen and (min-width: 1120px){
+    #videos{
+        #player{
+            width: 60%;
+            height: 32vw;
+        }
+        #vid-actions{
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}
+@media only screen and (min-width: 1167px){
+    #videos{
+        #player{
+            width: 90%;
+            height: 33vw;
+        }
+    }
+}
+@media only screen and (min-width: 1280px){
+    #videos{
+        padding: 0 0 2em 0;
+        #player{
+            width: 80%;
+            height: 29vw;
+        }
+    }
+}
+@media only screen and (min-width: 1500px){
+    #videos{
+        #player{
+            width: 60%;
+            height: 24vw;
+        }
+    }
+}
+@media only screen and (min-width: 1800px){
+    #videos{
+        #player{
+            height: 20vw;
+        }
+    }
+}

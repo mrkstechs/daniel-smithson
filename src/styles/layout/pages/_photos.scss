@@ -1,0 +1,96 @@
+#photos{
+    padding: 0 2em;
+    .wp-block-image{
+        figure{
+            figcaption{
+                display: inline-block !important;
+                text-align: center;
+                padding: 0.3em 0.5em;
+                background-color: $charcoal;
+            }
+        }
+    }
+    .wp-block-image:nth-child(odd){
+        figure{
+            figcaption{
+                transform: translateX(20%);
+            }
+        }
+    }
+    .wp-block-image:nth-child(even){
+        figure{
+            figcaption{
+                transform: translateX(25%);
+            }
+        }
+    }
+}
+@media only screen and (min-width: 460px){
+    #photos{
+        .wp-block-image{
+            figure{
+                img{
+                    width: 80%;
+                }
+                figcaption{
+                    width: 75%;
+                }
+            }
+        }
+        .wp-block-image:nth-child(odd){
+            figure{
+                img{
+                    margin-left: auto;
+                }
+                figcaption{
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 700px){
+    #photos{
+        .entry-content{
+            padding: 0 2em;
+            .wp-block-image{
+                figure{
+                    img{
+                        width: 70%;
+                    }
+                    figcaption{
+                        width: 65%;
+                    }
+                }
+            }
+            .wp-block-image:nth-child(odd){
+                figure{
+                    figcaption{
+                        transform: translateX(40%);
+                    }
+                }
+            }
+            .wp-block-image:nth-child(even){
+                figure{
+                    figcaption{
+                        transform: translateX(12.5%);
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 900px){
+    #photos{
+        .entry-content{
+            padding: 0 5em;
+        }
+    }
+}
+@media only screen and (min-width: 1168px){
+    #photos{
+        .entry-content{
+            padding: 0 2em;
+        }
+    }
+}

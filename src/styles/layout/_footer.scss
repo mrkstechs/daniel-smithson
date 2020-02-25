@@ -1,0 +1,84 @@
+#colophon{
+    width: 100%;
+    align-self: flex-end;
+    font-weight: 900;
+    font-size: .8em;
+    background-color: darken($grey, 7%);
+    padding: 0.01em;
+    min-height: 14vh;
+    margin-top: 1.3em;
+    p{
+        color: $lighter_dark;
+        text-align: center;
+        a{
+            color: $lighter_dark;
+            text-decoration: none;
+        }
+    }
+    .connect{
+        margin: 0 auto;
+        width: 50%;
+        justify-content: center;
+        background-color: transparent;
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                display: block;
+                #logo-wrap{
+                    width: 100%;
+                }
+                svg{
+                    fill: $lighter_dark;
+                    g{
+                        fill: $lighter_dark;
+                        .st0{
+                            fill: $lighter_dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ul{
+        list-style-type: none;
+        padding: 0;
+        li{
+            a{
+                display: block;
+                color: $lighter_dark;
+                text-decoration: none;
+                text-align: center;
+            }
+        }
+    }
+}
+@media only screen  and (min-width: 400px){
+    #colophon{
+        .connect{
+            width: 30%;
+        }
+    }
+}
+@media only screen  and (min-width: 795px){
+    #colophon{
+        .connect{
+            width: 20%;
+        }
+    }
+}
+@media only screen  and (min-width: 1167px){
+    #colophon{
+        .connect{
+            width: 15%;
+        }
+    }
+}
+@media only screen  and (min-width: 1440px){
+    #colophon{
+        .connect{
+            width: 10%;
+        }
+    }
+}

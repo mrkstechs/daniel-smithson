@@ -1,0 +1,319 @@
+#masthead{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    width: 100%;
+    align-self: flex-start;
+    min-height: 17.9vh;
+    svg{
+        display: block;
+        overflow: visible;
+    }
+    .header_items{
+        width: 90%;
+        overflow: hidden;
+    }
+    .header_items{
+        a{
+            color: $white;
+            text-decoration: none;
+            font-weight: 900;
+            #logo-wrap{
+                display: flex;
+                flex-wrap: wrap;
+                p{
+                    display: inline-block;
+                    font-size: 2.2em;
+                    margin: 0;
+                }
+                #logo-img{
+                    width: 23%;
+                    display: flex;
+                    align-items: center;
+                    margin-left: .5em;
+                }
+                p:nth-child(3){
+                    font-size: 2.4em;
+                    margin-top: -.55em;
+                }
+            }
+        }
+    }
+    .connect{
+        width: 60%;
+        margin-top: -.2em;
+        margin-bottom: 0;
+    }
+    .menu_wrap{
+        width: 10%;
+        #menu-btn{
+            width: 70%;
+            margin: 0.4em 0 0 auto;
+        }
+    }
+}
+#secondary.show{
+    right: 0vw;
+}
+#secondary{
+    position: absolute;
+    top: 0;
+    bottom: 0vh;
+    right: -100vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+    background-color: $footer_grey;
+    z-index: 4;
+    transition: all .7s ease;
+    #close-btn{
+        display: block;
+        align-self: flex-start;
+        width: 30%;
+        margin-left: auto;
+        .st0{
+            fill: $black;
+        }
+    }
+    #nav_menu-2 {
+        margin: 0 auto;
+    }
+    #menu-main-menu{
+        margin-top: 20vh;
+        padding: 0;
+        list-style-type: none;
+        li{
+            a{
+                display: block;
+                text-align: center;
+                font-size: 3em;
+                font-weight: 900;
+                color: $black;
+                text-decoration: none;
+            }
+        }
+    }
+    .connect{
+        width: 75%;
+        margin: 0 auto;
+        padding: .7em 0;
+        li{
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+// Media Queries
+@media only screen  and (min-width: 400px){
+    #masthead{
+        padding: 1.2em 1.75em 1em 1.75em;
+        .header_items{
+            width: 70%;
+            a{
+                #logo-wrap{
+                    p{
+                        font-size: 2em;
+                    }
+                    p:nth-child(3){
+                        font-size: 2.1em;
+                    }
+                }
+            }
+        }
+        .menu_wrap{
+            #menu-btn{
+                width: 55%;
+            }
+        }
+    }
+    #secondary{
+        #close-btn{
+            width: 25%;
+        }
+    }
+}
+@media only screen and (min-width: 441px){
+   #masthead{
+       .header_items{
+           width: 60%;
+       }
+   }
+}
+@media only screen  and (min-width: 500px){
+    #secondary{
+        #close-btn{
+            width: 20%;
+        }
+        .connect{
+            width: 40%;
+        }
+    }
+}
+@media only screen and (min-width: 572px){
+    #masthead{
+        .header_items{
+            width: 50%;
+            a{
+                #logo-wrap{
+                    #logo-img{
+                        width: 20%;
+                    }
+                }
+            }
+        }
+        .menu_wrap{
+            #menu-btn{
+                width: 40%;
+            }
+        }
+    }
+ }
+ @media only screen and (min-width: 687px){
+    #masthead{
+        .header_items{
+            width: 45%;
+            a{
+                #logo-wrap{
+                    width: 60%;
+                    #logo-img{
+                        width: 30%;
+                    }
+                }
+            }
+        }
+        .menu_wrap{
+            #menu-btn{
+                width: 33%;
+            }
+        }
+        .connect{
+            width: 50%;
+        }
+    }
+ }
+ @media only screen and (min-width: 849px){
+    #masthead{
+        .header_items{
+            width: 40%;
+        }
+        .menu_wrap{
+            #menu-btn{
+                width: 27%;
+            }
+        }
+    }
+    #secondary{
+        #close-btn{
+            width: 15%;
+        }
+    }
+ }
+@media only screen and (min-width: 1024px){
+    #masthead{
+        .header_items{
+            width: 35%;
+        }
+        .menu_wrap{
+            #menu-btn{
+                width: 25%;
+            }
+        }
+    }
+    #secondary{
+        .connect{
+            width: 25%;
+        }
+    }
+}
+@media only screen and (min-width: 1167px){
+    #masthead{
+        padding: 2em 5em 0em 5em;
+        .header_items{
+            width: 35%;
+            a{
+                #logo-wrap{
+                    p{
+                        font-size: 2.7em;
+                    }
+                    p:nth-child(3){
+                        font-size: 2.8em;
+                    }
+                }
+            }
+        }
+        .menu_wrap{
+            #menu-btn{
+                width: 25%;
+            }
+        }
+    }
+    #secondary{
+        .connect{
+            width: 20%;
+        }
+    }
+}
+@media only screen and (min-width: 1280px){
+    #masthead{
+        .header_items{
+            width: 30%;
+        }
+        .menu_wrap{
+            #menu-btn{
+                width: 20%;
+            }
+        }
+        .connect{
+            width: 50%;
+        }
+    }
+}
+@media only screen and (min-width: 1520px){
+    #masthead{
+        .header_items{
+            width: 25%;
+        }
+        .menu_wrap{
+            #menu-btn{
+                width: 20%;
+            }
+        }
+    }
+    #secondary{
+        #close-btn{
+            width: 13%;
+            margin-right: 1em;
+            margin-top: 0.5em;
+        }
+        .connect{
+            width: 15%;
+        }
+    }
+}
+@media only screen and (min-width: 1816px){
+    #masthead{
+        .header_items{
+            width: 20%;
+        }
+        .menu_wrap{
+            #menu-btn{
+                width: 15%;
+            }
+        }
+    }
+    #secondary{
+        .connect{
+            width: 10%;
+        }
+    }
+}
